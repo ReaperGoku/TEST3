@@ -10,9 +10,9 @@ module.exports = async(client, member) => {
 	  
 	if(!wChan) return;
 	
-	let count = member.guild.memberCount.toString() 
-	let end = count[count.length]
-	let suffixed = end == 1 ? count + "st" : end == 2 ? count + "nd" : end == 3 ? count + "rd" : count + "th" 
+	let count = member.guild.memberCount.toString(); 
+	let end = count[count.length];
+	let suffixed = end == 1 ? count + "st" : end == 2 ? count + "nd" : end == 3 ? count + "rd" : count + "th" ;
 
 	const channel = member.guild.channels.get(wChan);
 	if (!channel) return;
@@ -20,7 +20,7 @@ module.exports = async(client, member) => {
 	const canvas = Canvas.createCanvas(2560, 1440);
 	const ctx = canvas.getContext('2d');
 	try{
-	const background = await Canvas.loadImage('https://i.pinimg.com/originals/c7/2d/fc/c72dfc54da51757a4719c4b441470e7d.jpg');
+	const background = await Canvas.loadImage('https://i.pinimg.com/originals/94/fc/32/94fc32aec923940b18ba0a8e8e85e56d.jpg');
 	ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
 	ctx.strokeStyle = '#ffffff';

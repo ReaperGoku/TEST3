@@ -1,6 +1,7 @@
 const db = require("quick.db")
 const discord = require('discord.js');
 const Canvas = require('canvas');
+const {getGetOrdinal} = require('../../functions.js')
 
 module.exports = async(client, member) => {
 
@@ -10,9 +11,8 @@ module.exports = async(client, member) => {
 	  
 	if(!wChan) return;
 	
-	let count = member.guild.memberCount.toString(); 
-	let end = count[count.length];
-	let suffixed = end == 1 ? count + "st" : end == 2 ? count + "nd" : end == 3 ? count + "rd" : count + "th" ;
+	let count = member.guild.memberCount;
+	let suffixed = getGetOrdinal(count);
 
 	const channel = member.guild.channels.get(wChan);
 	if (!channel) return;

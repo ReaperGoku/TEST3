@@ -6,7 +6,6 @@ const { getGetOrdinal } = require('../../functions.js')
 module.exports = async(client, member) => {
 
 	let wChan = db.fetch(`${member.guild.id}`)
-	console.log(wChan);
   
 	if(wChan == null) return;
 	  

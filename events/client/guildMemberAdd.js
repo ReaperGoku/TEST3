@@ -1,11 +1,12 @@
 const db = require("quick.db")
 const discord = require('discord.js');
 const Canvas = require('canvas');
-const {getGetOrdinal} = require('../../functions.js')
+const { getGetOrdinal } = require('../../functions.js')
 
 module.exports = async(client, member) => {
 
 	let wChan = db.fetch(`${member.guild.id}`)
+	console.log(wChan);
   
 	if(wChan == null) return;
 	  

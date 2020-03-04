@@ -3,9 +3,7 @@ const db = require("quick.db")
 module.exports = {
     name : "setchannel",
     category: "admin",
-    // description : "",
-    // usage: "[ | ]",
-
+    
     run : async(client, message, args) => {
         let permission = message.member.hasPermission("ADMINISTRATOR");
 

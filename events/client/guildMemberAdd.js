@@ -10,11 +10,18 @@ module.exports = async(client, member) => {
 	if(wChan == null) return;
 	  
 	if(!wChan) return;
+
+	const channel = member.guild.channels.get(wChan);
+
+	if(member.user.bot){
+		member.kick('Bot not allowed');
+		channel.send(`\*\*\*${member} is Bot & Kicked by Admin\*\*\*`);
+		return;
+	};
 	
 	let count = member.guild.memberCount;
 	let suffixed = getGetOrdinal(count);
 
-	const channel = member.guild.channels.get(wChan);
 	if (!channel) return;
 
 	const canvas = Canvas.createCanvas(2560, 1440);

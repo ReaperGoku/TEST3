@@ -13,11 +13,11 @@ module.exports = async(client, member) => {
 
 	const channel = member.guild.channels.get(wChan);
 
-	if(member.user.bot){
-		member.kick('Bot not allowed');
-		channel.send(`\*\*\*${member} is Bot & Kicked by Admin\*\*\*`);
-		return;
-	};
+	// if(member.user.bot){
+	// 	member.kick('Bot not allowed');
+	// 	channel.send(`\*\*\*${member} is Bot & Kicked by Admin\*\*\*`);
+	// 	return;
+	// };
 	
 	let count = member.guild.memberCount;
 	let suffixed = getGetOrdinal(count);

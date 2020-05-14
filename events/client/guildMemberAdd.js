@@ -49,8 +49,8 @@ module.exports = async(client, member) => {
 	try{
 	channel.send(`Welcome to the server, ${member}`+ "\n" + 
 	`You are the **${suffixed}** member!`+ "\n" +
-	`📌 Dont forgot to read ${member.guild.channels.get('547101326019002409').toString()}` + "\n" +
-	`📌 Check ${member.guild.channels.get('589503796913111149').toString()} for Role 👑`, {files: [attachment] });
+	`📌 Dont forgot to read ${member.guild.channels.get('709072820428079545').toString()}` + "\n" +
+	`📌 Check ${member.guild.channels.get('709970370148433960').toString()} for Role 👑`, {files: [attachment] });
 	} catch(error) {
 		console.log(error);
 	}

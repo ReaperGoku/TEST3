@@ -27,7 +27,7 @@ module.exports = async(client, member) => {
 	const canvas = Canvas.createCanvas(2560, 1440);
 	const ctx = canvas.getContext('2d');
 	try{
-	const background = await Canvas.loadImage('https://i.pinimg.com/originals/94/fc/32/94fc32aec923940b18ba0a8e8e85e56d.jpg');
+	const background = await Canvas.loadImage('https://i.pinimg.com/originals/a1/76/e5/a176e5068274696bca082674c396c2ef.jpg');
 	ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
 	ctx.strokeStyle = '#ffffff';
